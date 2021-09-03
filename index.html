@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="./dist/style.css" >
+</head>
+<body>
+  <img src="./images/bg-desktop-dark.jpg" class="dark-mode" id="darkMode" style="display: none;">
+  <img src="./images/bg-desktop-light.jpg" class="light-mode" id="lightkMode">
+  <div class="container">
+
+    <div class="title">
+      <h1>TODO</h1>
+      <i>
+        <img src="/images/icon-sun.svg" id="sunIcon" class="icon"/>
+      </i>
+      <i>
+        <img src="/images/icon-moon.svg" id="moonIcon" class="icon"/>
+      </i>
+    </div>
+
+    <div class="input-container">
+      <input type="checkbox" class="addCheckBox"/>
+      <input type="text" name="addTask" class="addTask" id="addTask" placeholder="Create a new todo" />
+    </div>
+
+    <div class="output-container">
+      <ul class="list">
+       <li>Learn ReactJS coding </li>
+      </ul>
+    </div>
+    <div class="filters-container">
+      <span class="itemsLeft">5 items left</span>
+      <div class="filters">
+        <button class="all">All</button>
+        <button class="active">Active</button>
+        <button class="completed">Completed</button>
+      </div>
+      <button class="clear">Clear Completed</button>
+    </div>
+
+  </div>
+</body>
+</html>
