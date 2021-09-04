@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-body, html {
+body {
   font-size: 18px;
   overflow-x: hidden;
   font-family: "Josefin Sans";
@@ -18,11 +18,13 @@ body, html {
 }
 
 .container {
-  width: 40vw;
-  border: 2px solid black;
-  height: 85vh;
-  margin: 0 auto;
-  margin-top: 50px;
+  width: 40%;
+  margin: 40px auto;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
 }
 
 .title {
@@ -45,7 +47,7 @@ body, html {
 
 .input-container {
   margin: 20px 0;
-  height: 50px;
+  height: 60px;
   position: relative;
 }
 .input-container .addTask {
@@ -60,12 +62,112 @@ body, html {
 }
 .input-container .addCheckBox {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 13px;
   appearance: none;
-  height: 30px;
-  width: 30px;
-  border: #777a92 1px solid;
+  height: 25px;
+  width: 25px;
+  border: #d2d3db 1px solid;
   border-radius: 20px;
   cursor: pointer;
+}
+.input-container .addCheckBox:checked:after {
+  content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2224%22%20height%3D%2224%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M12%2020v-8m0%200V4m0%208h8m-8%200H4%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.output-container {
+  width: 100%;
+  position: relative;
+  -webkit-box-shadow: 0px 3px 13px -4px #000000;
+  box-shadow: 0px 3px 13px -4px #000000;
+}
+.output-container .list {
+  background-color: white;
+  border-radius: 5px;
+  list-style: none;
+}
+.output-container .list li {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #484b6a;
+  border-bottom: 1px solid #d2d3db;
+}
+.output-container .list li .completeCheckBox {
+  appearance: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  border: #d2d3db 1px solid;
+}
+.output-container .list li .completeCheckBox:checked::after {
+  content: url("../images/icon-check.svg");
+  background: linear-gradient(140deg, blue, #ff86ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+.output-container .list .complete {
+  text-decoration: line-through;
+  color: #777a92;
+}
+
+.filters-container {
+  height: 60px;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  color: #9394a5;
+  padding: 20px;
+  font-size: 1rem;
+}
+.filters-container .filters {
+  width: 40%;
+  justify-content: space-between;
+  display: flex;
+}
+.filters-container .filters button {
+  font-family: inherit;
+  font-weight: 700;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+.filters-container .filters button:hover:not(.all) {
+  color: #484b6a;
+}
+@media only screen and (max-width: 768px) {
+  .filters-container .filters button {
+    margin: 0 5px;
+  }
+}
+.filters-container .filters .all {
+  color: #4D7EDB;
+}
+.filters-container .clear {
+  font-family: inherit;
+  font-weight: 400;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+.filters-container .clear:hover {
+  color: #4D7EDB;
 }
