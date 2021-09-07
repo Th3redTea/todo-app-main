@@ -27,36 +27,16 @@
     </div>
 
     <div class="input-container">
-      <input type="checkbox" class="addCheckBox"/>
-      <input type="text" name="addTask" class="addTask" id="addTask" placeholder="Create a new todo" />
+      <button type="checkbox" class="addCheckBox" ></button>
+      <input value="" type="text" name="addTask" class="addTask" id="addTask" placeholder="Create a new todo" />
     </div>
 
     <div class="output-container">
-      <ul class="list">
-       <li>
-        <input type="checkbox" class="completeCheckBox" /> 
+      <ul class="list" id="list">
+       <!-- <li class="item">
+        <input type="checkbox" class="completeCheckBox" id="completeCheckBox" /> 
         Learn ReactJS coding 
-        </li>
-        <li>
-          <input type="checkbox" class="completeCheckBox" /> 
-          Learn ReactJS coding 
-        </li>
-        <li>
-          <input type="checkbox" class="completeCheckBox" /> 
-          Learn ReactJS coding 
-        </li>
-        <li>
-          <input type="checkbox" class="completeCheckBox" /> 
-          Learn ReactJS coding 
-        </li>
-        <li>
-          <input type="checkbox" class="completeCheckBox" /> 
-          Learn ReactJS coding 
-        </li>
-        <li>
-          <input type="checkbox" class="completeCheckBox" /> 
-          Learn ReactJS coding 
-        </li>
+        </li> -->
       </ul>
       <div class="filters-container">
         <span class="itemsLeft">5 items left</span>
@@ -65,9 +45,11 @@
           <button class="active">Active</button>
           <button class="completed">Completed</button>
         </div>
-        <button class="clear">Clear Completed</button>
+        <button class="clear" id="clear">Clear Completed</button>
       </div>
     </div>
   </div>
+
+  <script src="./app.js"></script>
 </body>
 </html>

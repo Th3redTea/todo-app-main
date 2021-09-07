@@ -9,3 +9,21 @@
   Clear Completed
 
   Drag and drop to reorder list
+
+  select the following elements:
+
+  .addTask --> input element
+  .addCheckBox --> checkbox and add button --> returns unchecked after click. 
+
+  
+  takes the value of the addTask and check if it's not empty then place it in an array. 
+
+  select the ul element .list and create li elemnt and give it the value from the array then appened it to the ul elemnt. 
+
+  create a checkbox input and appended it to the li element
+
+  items in the array shoud be objects with the following properties:
+
+  text: the text
+  isComplete: boolean
+  id: an id number

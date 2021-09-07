@@ -92,7 +92,7 @@ body {
   border-radius: 5px;
   list-style: none;
 }
-.output-container .list li {
+.output-container .list .item {
   height: 60px;
   display: flex;
   align-items: center;
@@ -100,7 +100,7 @@ body {
   color: #484b6a;
   border-bottom: 1px solid #d2d3db;
 }
-.output-container .list li .completeCheckBox {
+.output-container .list .item .completeCheckBox {
   appearance: none;
   height: 25px;
   width: 25px;
@@ -109,7 +109,7 @@ body {
   margin-right: 10px;
   border: #d2d3db 1px solid;
 }
-.output-container .list li .completeCheckBox:checked::after {
+.output-container .list .item .completeCheckBox:checked::after {
   content: url("../images/icon-check.svg");
   background: linear-gradient(140deg, blue, #ff86ff);
   display: flex;
