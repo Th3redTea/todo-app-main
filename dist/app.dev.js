@@ -3,6 +3,9 @@
 var input = document.getElementById('addTask');
 var addinput = document.querySelector('.addCheckBox');
 var list = document.getElementById('list');
+var items = document.getElementsByClassName('item');
+var clear = document.getElementById('clear');
+console.log(items);
 var todos = [];
 
 var addTodo = function addTodo(value) {
@@ -38,15 +41,23 @@ addinput.addEventListener('click', function () {
   addTodo(input.value);
   input.value = "";
 });
-var clear = document.getElementById('clear');
-clear.addEventListener('click', function () {
-  todos.filter(function (todo) {
-    if (todo.isComplete) {
+
+var clearComplete = function clearComplete(todo) {
+  Object.values(items).map(function (item) {
+    if (item.textContent === todo.text && todo.isComplete) {
+      item.remove();
       var idx = todos.indexOf(todo);
 
       if (idx !== -1) {
         todos.splice(idx, 1);
       }
     }
+  });
+};
+
+clear.addEventListener('click', function () {
+  todos.forEach(function (todo) {
+    clearComplete(todo);
+    console.log(todos);
   });
 });

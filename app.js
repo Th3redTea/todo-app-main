@@ -1,6 +1,10 @@
 const input = document.getElementById('addTask')
 const addinput = document.querySelector('.addCheckBox')
 const list = document.getElementById('list')
+const items = document.getElementsByClassName('item')
+const clear = document.getElementById('clear')
+
+console.log(items)
 
 const todos = []
 
@@ -56,15 +60,29 @@ addinput.addEventListener('click', () => {
 
 
 
-const clear = document.getElementById('clear')
 
-clear.addEventListener('click', () =>{
-    todos.filter(todo => {
-        if(todo.isComplete){
+const clearComplete = (todo) => {
+    
+    
+    Object.values(items).map(item => {
+        if(item.textContent === todo.text && todo.isComplete){
+            item.remove()
+ 
             let idx = todos.indexOf(todo)
             if (idx !== -1) {
-                todos.splice(idx, 1)
+                    todos.splice(idx, 1)
             }
         }
-    })
+    })    
+
+}
+
+clear.addEventListener('click', () =>{
+
+
+    todos.forEach(todo => {
+        clearComplete(todo)
+        console.log(todos)
+    });
+
 })
