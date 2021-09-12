@@ -9,10 +9,10 @@
   <title>Frontend Mentor | Todo app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link rel="stylesheet" href="./dist/style.css" >
+  <link rel="stylesheet"  id="styleLink" href="./dist/style.css" >
 </head>
 <body>
-  <img src="./images/bg-desktop-dark.jpg" class="dark-mode" id="darkMode" style="display: none;">
+  <img src="./images/bg-desktop-dark.jpg" class="dark-mode" id="darkMode">
   <img src="./images/bg-desktop-light.jpg" class="light-mode" id="lightkMode">
   <div class="container">
 
@@ -39,11 +39,11 @@
         </li> -->
       </ul>
       <div class="filters-container">
-        <span class="itemsLeft">5 items left</span>
+        <span class="itemsLeft" id="itemsLeft"></span>
         <div class="filters">
-          <button class="all">All</button>
-          <button class="active">Active</button>
-          <button class="completed">Completed</button>
+          <button class="all" id="all">All</button>
+          <button class="active" id="active">Active</button>
+          <button class="completed" id="completed">Completed</button>
         </div>
         <button class="clear" id="clear">Clear Completed</button>
       </div>

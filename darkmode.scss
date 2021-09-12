@@ -35,15 +35,16 @@ body{
     font-size: $font-size;
     overflow-x: hidden;
     font-family: 'Josefin Sans';
+    background-color: $Very-Dark-Blue;
 }
 
 
 #darkMode{
-    visibility: hidden;
+    visibility: visible;
 }
 
 .light-mode{
-    visibility: visible;
+    visibility: hidden;
 }
 
 .light-mode, .dark-mode{
@@ -78,6 +79,10 @@ body{
     }
 
     #sunIcon{
+        visibility: visible;
+    }
+
+    #moonIcon{
         visibility: hidden;
     }
 
@@ -90,6 +95,8 @@ body{
     position: relative;
 
     .addTask{
+        background-color: $Very-Dark-Desaturated-Blue;
+        color: $Light-Grayish-Blue-hover;
         width: 100%;
         height: 100%;
         padding: 0 50px;
@@ -134,7 +141,7 @@ body{
     box-shadow: 0px 3px 13px -4px #000000;
 
     .list{
-        background-color: white;
+        background-color: $Very-Dark-Desaturated-Blue;
         border-radius: 5px;
         list-style: none;
         .item{
@@ -142,7 +149,7 @@ body{
             display: flex;
             align-items: center;
             padding:  10px;
-            color: $very-dark-grayish-blue;
+            color: $Dark-Grayish-Blue;
             border-bottom: 1px solid $light-grayish-blue;
 
 
@@ -183,7 +190,7 @@ body{
 
 .filters-container{
     height: 60px;
-    background-color: white;
+    background-color: $Very-Dark-Desaturated-Blue;
     width: 100%;
     display: flex;
     align-items: center;
