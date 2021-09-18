@@ -31,7 +31,8 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .container {
-    width: 90%;
+    width: 90vw;
+    position: relative;
   }
 }
 
@@ -148,6 +149,20 @@ body {
   width: 40%;
   justify-content: space-between;
   display: flex;
+}
+@media only screen and (max-width: 768px) {
+  .filters-container .filters {
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: -70px;
+    background-color: white;
+    width: 100%;
+    right: 0;
+    margin: 0 auto;
+    height: 50px;
+    -webkit-box-shadow: 0px 3px 13px -4px #000000;
+    box-shadow: 0px 3px 13px -4px #000000;
+  }
 }
 .filters-container .filters button {
   font-family: inherit;
