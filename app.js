@@ -7,7 +7,6 @@ var unorederdList = document.querySelector('.list');
 var body = document.querySelector('body');
 var filtersContainer = document.querySelector('.filters-container');
 var item = document.querySelectorAll('.item');
-// https://stackoverflow.com/questions/51723962/typescript-nodelistofelement-is-not-an-array-type-or-a-string-type
 var lightPic = document.querySelector('.light-mode');
 var darkPic = document.querySelector('.dark-mode');
 var sunIcon = document.getElementById('sunIcon');
@@ -50,6 +49,7 @@ moonIcon.addEventListener('click', function () {
         });
     }
 });
+localStorage.getItem('');
 var todos = [];
 var completedTodos = [];
 var activeTodos = [];

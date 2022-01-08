@@ -8,7 +8,6 @@ const unorederdList = document.querySelector('.list') as  HTMLUListElement;
 const body = document.querySelector('body') as HTMLElement;
 const filtersContainer = document.querySelector('.filters-container') as HTMLElement;
 const item = document.querySelectorAll('.item') as NodeListOf<HTMLElement>;
-// https://stackoverflow.com/questions/51723962/typescript-nodelistofelement-is-not-an-array-type-or-a-string-type
 const lightPic = document.querySelector('.light-mode') as HTMLElement;
 const darkPic = document.querySelector('.dark-mode') as HTMLElement;
 
@@ -85,12 +84,13 @@ interface Todo {
     isComplete: boolean,
 }
 
-const todos: Todo[] = []
+localStorage.getItem('')
+const todos: Todo[] = [] 
 const completedTodos: Todo[] = []
 const activeTodos: Todo[] = []
 
 const addTodo = (value: string) => {
-    const item: { text: string; isComplete: boolean } = {
+    const item: Todo = {
         text: value,
         isComplete: false,
     }
@@ -142,7 +142,7 @@ const items = document.getElementsByClassName('item')
 
 
 
-const clearComplete = (todo: any) => {
+const clearComplete = (todo: Todo) => {
     
     
     Object.values(items).map(item => {
@@ -226,4 +226,7 @@ active.addEventListener('click', showActive)
 const all = document.getElementById('all') as HTMLElement;
 
 all.addEventListener('click', showAll)
+
+
+
 
